@@ -12,7 +12,7 @@ import composeLayout from './composeLayout';
 import { store, ReduxState } from './models';
 import Home from './pages/home';
 import Setting from './pages/setting';
-import ControleDimmer from './pages/controleDimmer';
+import Dimmer from './pages/controleDimmer';
 
 console.disableYellowBox = true;
 
@@ -43,8 +43,8 @@ class MainLayout extends NavigatorLayout<Props> {
         };
         break;
 
-      case 'controleDimmer':
-        routeProps.title = 'ControleDimmer';
+      case 'dimmer':
+        routeProps.title = 'Dimmer';
         break;  
       default:
         break;
@@ -77,8 +77,8 @@ class MainLayout extends NavigatorLayout<Props> {
       case 'setting':
         component = <Setting />;
         break;
-      case 'controleDimmer':
-        component = <ControleDimmer />;
+      case 'dimmer':
+        component = <Dimmer />;
         break;
       default:
         break;

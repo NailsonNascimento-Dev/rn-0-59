@@ -1,13 +1,24 @@
 import { StyleSheet, View } from 'react-native';
-import { TYText } from 'tuya-panel-kit';
+import { TYText, Button } from 'tuya-panel-kit';
 import React from 'react';
+
+
 
 const ControleDimmer: React.FC = () => {
   return (
     <View style={styles.container}>
-      <TYText size={24} color="#f">
+      <TYText size={24} color="#f00">
        botão
       </TYText>
+      <TYText size={50} color="#f00">
+       barra dimmer
+      </TYText>
+
+      <Button 
+        text='teste'
+       
+      />
+
     </View>
   );
 };

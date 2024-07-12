@@ -26,6 +26,10 @@ const ConsoleLayout: React.FC<Props> = props => {
   const navToSetting = () => {
     TYSdk.Navigator.push({ id: 'setting' });
   };
+  const navToDimmer = () => {
+    TYSdk.Navigator.push({ id: 'dimmer' });
+  };
+
   const doClear = () => {
     dispatch(actions.common.clearConsole());
   };
@@ -47,8 +51,8 @@ const ConsoleLayout: React.FC<Props> = props => {
     <View style={[styles.container, style]}>
       <ScrollView style={[styles.list]}>{logs.map((v, k) => renderRow(v, k))}</ScrollView>
       <View style={styles.bottom}>
-      <Button style={styles.clear} onPress={navToSetting}>
-          <Text style={styles.clearText}>controleDimmer</Text>
+      <Button style={styles.clear} onPress={navToDimmer}>
+          <Text style={styles.clearText}>Dimmers</Text>
         </Button>
         <Button style={styles.clear} onPress={navToSetting}>
           <Text style={styles.clearText}>Setting</Text>
