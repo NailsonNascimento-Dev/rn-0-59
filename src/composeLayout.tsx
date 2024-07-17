@@ -79,14 +79,19 @@ const composeLayout = (store: Store, component: React.ComponentType) => {
 
     render() {
       return (
+
+        //provendo a store para IU
         <Provider store={store}>
+
           <Theme theme={theme}>
+
             <Connect mapStateToProps={_.identity}>
               {({ mapStateToProps, ...props }: { mapStateToProps: any; [prop: string]: any }) => {
                 const hasInit = Object.keys(props.dpState).length > 0;
                 return hasInit ? <NavigatorLayout {...props} /> : null;
               }}
             </Connect>
+            
           </Theme>
         </Provider>
       );

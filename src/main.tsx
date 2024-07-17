@@ -72,13 +72,13 @@ class MainLayout extends NavigatorLayout<Props> {
     let component;
     switch (route.id) {
       case 'main':
-        component = <Home />;
+        component = <Dimmer />;
         break;
       case 'setting':
         component = <Setting />;
         break;
       case 'dimmer':
-        component = <Dimmer />;
+        component = <Home />;
         break;
       default:
         break;
