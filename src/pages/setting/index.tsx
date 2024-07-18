@@ -1,6 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { TYText } from 'tuya-panel-kit';
 import React from 'react';
+import ControllBar from '../../components/ControllBar';
 
 const Setting: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const Setting: React.FC = () => {
       <TYText size={24} color="#fff">
         I am Setting Page&apos;s Content
       </TYText>
+      <ControllBar />
     </View>
   );
 };
@@ -15,8 +17,7 @@ const Setting: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 });
 
