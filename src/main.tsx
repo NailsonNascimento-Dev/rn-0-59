@@ -10,6 +10,7 @@ import {
 } from 'tuya-panel-kit';
 import composeLayout from './composeLayout';
 import { store, ReduxState } from './models';
+import HomeControll from './pages/HomeControll';
 import Home from './pages/home';
 import Setting from './pages/setting';
 import Dimmer from './pages/controleDimmer';
@@ -72,7 +73,7 @@ class MainLayout extends NavigatorLayout<Props> {
     let component;
     switch (route.id) {
       case 'main':
-        component = <Dimmer />;
+        component = <HomeControll/>;
         break;
       case 'setting':
         component = <Setting />;
