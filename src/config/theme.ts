@@ -5,9 +5,6 @@
  */
 export default {
   global: {
-    background: {
-      '3%': '#FF7E38',
-      '90%': '#FF624C',
-    },
+    background: "#f2f2f2",
   },
 };
