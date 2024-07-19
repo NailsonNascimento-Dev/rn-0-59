@@ -14,7 +14,7 @@ import { store, ReduxState } from './models';
 import HomeControll from './pages/HomeControll';
 import Home from './pages/home';
 import Setting from './pages/setting';
-import Dimmer from './pages/controleDimmer';
+
 
 console.disableYellowBox = true;
 
@@ -39,6 +39,7 @@ class MainLayout extends NavigatorLayout<Props> {
      
         case 'setting':
         routeProps.title = 'Setting';
+        
         routeProps.background = {
           '3%': '#f82232',
           '90%': '#FF624C',

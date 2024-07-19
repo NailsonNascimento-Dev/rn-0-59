@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import { TYText, Button, ControllerBar, IconFont, TYSdk } from 'tuya-panel-kit';
+import { TYText, Button, ControllerBar, IconFont, TYSdk, TabBar, Utils } from 'tuya-panel-kit';
 
 import React from 'react';
 
@@ -20,17 +20,43 @@ const navToHome = () => {
     TYSdk.Navigator.push({ id: 'main' });
 };
 
+const { convertX: cx } = Utils.RatioUtils;
+
 const ControleDimmer: React.FC = () => {
     return (
 
-        <ControllerBar style={styles.ControllerBar}
-            button={[
-                { text: '1', type: 'primary', iconPath: backAndroid, iconSize: 30, onPress: navToHome },
-                { text: '2', type: 'primary', iconPath: selected, iconSize: 30, onPress: navTotimer },
-                { text: '3', type: 'primary', iconPath: powerPath, iconSize: 30, onPress: navToSetting },
-            ]}
-        />
 
+        <View>
+            <ControllerBar style={styles.ControllerBar}
+                button={[
+                    { text: '1', type: 'primary', iconPath: backAndroid, iconSize: 30, onPress: navToHome },
+                    { text: '2', type: 'primary', iconPath: selected, iconSize: 30, onPress: navTotimer },
+                    { text: '3', type: 'primary', iconPath: powerPath, iconSize: 30, onPress: navToSetting },
+                ]}
+            />
+
+            <TabBar
+            type="string"
+            tabs={[
+
+                    
+                    { key: `1`, title: `1`, onPress: navToHome},
+                    { key: `2`, title: `2` },
+                    { key: `3`, title: `3` },
+
+            ]}
+            style={{
+                marginTop: 10,
+                height: cx(42),
+                borderRadius: cx(21),
+                backgroundColor: '#E5E5E5',
+                
+              }}
+            
+            
+            />
+            
+        </View>
     );
 };
 
